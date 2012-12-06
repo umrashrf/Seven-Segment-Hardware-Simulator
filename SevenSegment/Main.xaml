@@ -1,0 +1,148 @@
+﻿<Window x:Class="SevenSegment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="7-Segment" MinHeight="450" MinWidth="419" Height="450" Width="419" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <GroupBox Header="Output" Margin="5,3">
+            <Grid Width="300" Height="180" VerticalAlignment="Center" Margin="5,3">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                    <RowDefinition />
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Path Name="lnA" Grid.Column="1" VerticalAlignment="Bottom" Stroke="#36D3D3D3" StrokeThickness="3" Fill="#36D3D3D3" Data="M 2,10 C 27,6 52,2 77,1 C 102,1 127,1 152,1 C 177,2 202,6 227,10 C 202,14 177,19 152,20 C 127,20 102,20 77,20 C 52,20 27,14 2,10 L 2,10">
+                    <Path.LayoutTransform>
+                        <ScaleTransform ScaleX="0.43" ScaleY="0.67"  />
+                    </Path.LayoutTransform>
+                </Path>
+
+                <Path Name="lnB" Grid.Row="1" Grid.Column="2" Grid.RowSpan="3" Stroke="LightGray" HorizontalAlignment="Left" StrokeThickness="3" Fill="LightGray" Data="M 2,10 C 27,6 52,2 77,1 C 102,1 127,1 152,1 C 177,2 202,6 227,10 C 202,14 177,19 152,20 C 127,20 102,20 77,20 C 52,20 27,14 2,10 L 2,10">
+                    <Path.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.25" ScaleY="0.7"  />
+                            <RotateTransform Angle="90" />
+                        </TransformGroup>
+                    </Path.LayoutTransform>
+                </Path>
+
+                <Path Name="lnC" Grid.Row="5" Grid.Column="2" Grid.RowSpan="3" Stroke="LightGray" HorizontalAlignment="Left" StrokeThickness="3" Fill="LightGray" Data="M 2,10 C 27,6 52,2 77,1 C 102,1 127,1 152,1 C 177,2 202,6 227,10 C 202,14 177,19 152,20 C 127,20 102,20 77,20 C 52,20 27,14 2,10 L 2,10">
+                    <Path.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.25" ScaleY="0.7"  />
+                            <RotateTransform Angle="90" />
+                        </TransformGroup>
+                    </Path.LayoutTransform>
+                </Path>
+
+                <Path Name="lnD" Grid.Row="8" Grid.Column="1" VerticalAlignment="Top" Stroke="LightGray" StrokeThickness="3" Fill="LightGray" Data="M 2,10 C 27,6 52,2 77,1 C 102,1 127,1 152,1 C 177,2 202,6 227,10 C 202,14 177,19 152,20 C 127,20 102,20 77,20 C 52,20 27,14 2,10 L 2,10">
+                    <Path.LayoutTransform>
+                        <ScaleTransform ScaleX="0.43" ScaleY="0.67"  />
+                    </Path.LayoutTransform>
+                </Path>
+
+                <Path Name="lnE" Grid.Row="5" Grid.RowSpan="3" Stroke="LightGray" HorizontalAlignment="Right" StrokeThickness="3" Fill="LightGray" Data="M 2,10 C 27,6 52,2 77,1 C 102,1 127,1 152,1 C 177,2 202,6 227,10 C 202,14 177,19 152,20 C 127,20 102,20 77,20 C 52,20 27,14 2,10 L 2,10">
+                    <Path.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.25" ScaleY="0.7"  />
+                            <RotateTransform Angle="90" />
+                        </TransformGroup>
+                    </Path.LayoutTransform>
+                </Path>
+
+                <Path Name="lnF" Grid.Row="1" Grid.RowSpan="3" Stroke="LightGray" HorizontalAlignment="Right" StrokeThickness="3" Fill="LightGray" Data="M 2,10 C 27,6 52,2 77,1 C 102,1 127,1 152,1 C 177,2 202,6 227,10 C 202,14 177,19 152,20 C 127,20 102,20 77,20 C 52,20 27,14 2,10 L 2,10">
+                    <Path.LayoutTransform>
+                        <TransformGroup>
+                            <ScaleTransform ScaleX="0.25" ScaleY="0.7"  />
+                            <RotateTransform Angle="90" />
+                        </TransformGroup>
+                    </Path.LayoutTransform>
+                </Path>
+
+                <Path Name="lnG" Grid.Row="4" Grid.Column="1" VerticalAlignment="Center" Stroke="LightGray" StrokeThickness="3" Fill="LightGray" Data="M 2,10 C 27,6 52,2 77,1 C 102,1 127,1 152,1 C 177,2 202,6 227,10 C 202,14 177,19 152,20 C 127,20 102,20 77,20 C 52,20 27,14 2,10 L 2,10">
+                    <Path.LayoutTransform>
+                        <ScaleTransform ScaleX="0.43" ScaleY="0.67"  />
+                    </Path.LayoutTransform>
+                </Path>
+
+                <Rectangle Name="lnH" Stroke="LightGray" Fill="LightGray" StrokeThickness="5" Width="10" Height="10" Grid.Row="8" Grid.Column="2"
+                           HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="15,0,0,0" />
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Input" Margin="5,3" Grid.Row="1">
+            <Grid HorizontalAlignment="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition />
+                    <RowDefinition Height="2*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <Grid.Resources>
+                    <Style TargetType="TextBlock">
+                        <Setter Property="VerticalAlignment" Value="Bottom" />
+                        <Setter Property="HorizontalAlignment" Value="Center" />
+                    </Style>
+                    <Style TargetType="TextBox">
+                        <Setter Property="Margin" Value="5,3" />
+                        <Setter Property="Width" Value="30" />
+                        <Setter Property="Height" Value="30" />
+                        <Setter Property="VerticalContentAlignment" Value="Center" />
+                        <Setter Property="HorizontalContentAlignment" Value="Center" />
+                    </Style>
+                </Grid.Resources>
+
+
+                <TextBlock>A</TextBlock>
+                <TextBlock Grid.Column="1">B</TextBlock>
+                <TextBlock Grid.Column="2">C</TextBlock>
+                <TextBlock Grid.Column="3">D</TextBlock>
+                <TextBlock Grid.Column="4">E</TextBlock>
+                <TextBlock Grid.Column="5">F</TextBlock>
+                <TextBlock Grid.Column="6">G</TextBlock>
+                <TextBlock Grid.Column="7">H</TextBlock>
+
+                <TextBox Name="txtA" Grid.Row="1" Text="1" TextChanged="txtInput_TextChanged" GotFocus="txtInput_GotFocus" KeyUp="txtInput_KeyUp" TabIndex="0"></TextBox>
+                <TextBox Name="txtB" Grid.Row="1" Grid.Column="1" Text="1" TextChanged="txtInput_TextChanged" GotFocus="txtInput_GotFocus" KeyUp="txtInput_KeyUp" TabIndex="1"></TextBox>
+                <TextBox Name="txtC" Grid.Row="1" Grid.Column="2" Text="1" TextChanged="txtInput_TextChanged" GotFocus="txtInput_GotFocus" KeyUp="txtInput_KeyUp" TabIndex="2"></TextBox>
+                <TextBox Name="txtD" Grid.Row="1" Grid.Column="3" Text="1" TextChanged="txtInput_TextChanged" GotFocus="txtInput_GotFocus" KeyUp="txtInput_KeyUp" TabIndex="3"></TextBox>
+                <TextBox Name="txtE" Grid.Row="1" Grid.Column="4" Text="1" TextChanged="txtInput_TextChanged" GotFocus="txtInput_GotFocus" KeyUp="txtInput_KeyUp" TabIndex="4"></TextBox>
+                <TextBox Name="txtF" Grid.Row="1" Grid.Column="5" Text="1" TextChanged="txtInput_TextChanged" GotFocus="txtInput_GotFocus" KeyUp="txtInput_KeyUp" TabIndex="5"></TextBox>
+                <TextBox Name="txtG" Grid.Row="1" Grid.Column="6" Text="1" TextChanged="txtInput_TextChanged" GotFocus="txtInput_GotFocus" KeyUp="txtInput_KeyUp" TabIndex="6"></TextBox>
+                <TextBox Name="txtH" Grid.Row="1" Grid.Column="7" Text="1" TextChanged="txtInput_TextChanged" GotFocus="txtInput_GotFocus" KeyUp="txtInput_KeyUp" TabIndex="7"></TextBox>
+            </Grid>
+        </GroupBox>
+        <GroupBox Header="Contact" Margin="5,3" Grid.Row="2">
+            <StackPanel Margin="5,3">
+                <TextBlock FontWeight="Bold">Umair Ashraf</TextBlock>
+                <TextBlock MouseLeftButtonUp="txtLink_MouseLeftButtonUp" Foreground="Blue" Cursor="Hand">info@umairashraf.me</TextBlock>
+            </StackPanel>
+        </GroupBox>
+    </Grid>
+</Window>
